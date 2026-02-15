@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More event <html></html></title>
+</head>
+<body>
+    <button id="btn-mouse">MouseEnter</button>
+    <input id="user-info" type="text">
+
+
+    <script>
+        // document.getElementById('btn-mouse').addEventListener('mouseout',
+        //     () =>{
+        //         console.log('hello our president')
+        //     }
+        // )
+
+        // document.getElementById('btn-mouse').addEventListener('mouseenter',
+        //     () =>{
+        //         console.log('hello our president')
+        //     }
+        // )
+
+
+        // document.getElementById('btn-mouse').addEventListener('mousemove',
+        //     () =>{
+        //         console.log('hello our president')
+        //     }
+        // )
+
+
+        // document.getElementById('btn-mouse').addEventListener('mouseout',
+        //     () =>{
+        //         console.log('hello our president')
+        //     }
+        // )
+
+
+        // document.getElementById('user-info').addEventListener('focus',
+        //     function (){
+        //         console.log('text focused')
+        //     }
+        // )
+
+        // document.getElementById('user-info').addEventListener('blur',
+        //     function (){
+        //         console.log('text blur ')
+        //     }
+        // )
+
+
+        // document.getElementById('user-info').addEventListener('keydown',
+        //     function (event){
+        //         console.log('press keydown done', event)
+        //     }
+        // )
+
+
+        document.getElementById('user-info').addEventListener('keydown',
+            function (event){
+                console.log('press keydown done', event.target.value)
+            }
+        )
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Delete</title>
+</head>
+<body>
+    <h1 id="secret">My secret info</h1>
+    <input type="text" name="" id="input-delete" placeholder="write delete">
+    <button disabled id="btn-delete">Delete</button>
+
+    <script>
+        document.getElementById('input-delete')
+        .addEventListener('keyup',
+            function (event){
+                const targetEvent = event.target.value;
+               const value= document.getElementById('input-delete').value;
+               const btn =document.getElementById('btn-delete');
+               const secret =document.getElementById('secret');
+
+                // if(value==='delete'){
+                //    btn.removeAttribute('disabled');
+                // }
+                if(targetEvent==='delete'){
+                    btn.removeAttribute('disabled');
+                     btn.style.backgroundColor='green';
+                    btn.style.color='white';
+                    secret.innerText = '';
+                }
+                else{
+                    btn.disabled='true';
+                    btn.style.backgroundColor='red';
+                    btn.style.color='white';
+                    secret.innerText = 'oi beta thik kore delete likho';
+                }
+
+            }
+        )
+    </script>
+</body>
+</html>
