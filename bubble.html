@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVent Bubble</title>
+    <style>
+        body{
+            margin: 10px;
+            border: 2px solid red;
+            padding: 10px;
+        }
+        section{
+            margin: 10px;
+            border: 2px solid blue;
+            padding: 10px;
+        }
+       ol{
+            margin: 10px;
+            border: 2px solid peru;
+            padding: 10px;
+        }
+        .item{
+            margin: 10px;
+            border: 2px solid purple;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body id="main">
+    <section id="section">
+        <h1>Explore Event bubble handler</h1>
+        <ol id="list-item">
+            <li class="item"id="item-1">item-1</li>
+            <li class="item"id="item-2">item-2</li>
+            <li class="item"id="item-3">item-3</li>
+            <li class="item"id="item-4">item-4</li>
+            <li class="item"id="item-5">item-5</li>
+        </ol>
+    </section>
+
+    <script>
+        document.getElementById('item-3')
+        .addEventListener('click',(event) =>{
+           
+            console.log('item-3 clicked')
+         
+        })
+        document.getElementById('item-4')
+        .addEventListener('click',(event) =>{
+            console.log('item-4  clicked')
+            // event.stopPropagation();
+        })
+        document.getElementById('item-5')
+        .addEventListener('click',(event) =>{
+            console.log('item-5  clicked')
+        })
+
+        document.getElementById('list-item')
+        .addEventListener('click',(event) =>{
+            console.log('ol clicked')
+        })
+
+        document.getElementById('section')
+        .addEventListener('click',(event) =>{
+            console.log('section clicked')
+        })
+
+        document.getElementById('main')
+        .addEventListener('click',(event) =>{
+            console.log('body clicked' ,event.target)
+        })
+
+    </script>
+</body>
+</html>

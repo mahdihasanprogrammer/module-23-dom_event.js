@@ -46,3 +46,5 @@ document.getElementById('option-4').addEventListener('click',
 
     
 )
+
+console.dir(document.querySelector('#main').childNodes)

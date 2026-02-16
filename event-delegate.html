@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegation</title>
+    <style>
+        ol{
+            border: 2px solid red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Explore the concept of Event Delegate.
+    </h1>
+
+    <ol id="item-list">
+            <li class="item">My Awesome item -1</li>
+            <li class="item">My Awesome item -2</li>
+            <li class="item">My Awesome item -3</li>
+            <li class="item">My Awesome item -4</li>
+            <li class="item">My Awesome item -5</li>
+            <li class="item">My Awesome item -6</li>
+            <li class="item">My Awesome item -7</li>
+        </ol>
+
+        <button id="btn-add-item">Add New Item</button>
+
+        <script>
+            const ol = document.getElementById('item-list')
+            ol.addEventListener('click',
+                function (event){
+                    console.log(event.target)
+                //   console.log( event.target.parentNode.removeChild(event.target))
+                }
+            )
+
+            document.getElementById('btn-add-item').addEventListener('click',
+                function(){
+
+                    // added parent
+                    
+                    const itemList =document.getElementById('item-list');
+                     
+                    // new item;
+                    const newLi = document.createElement('li');
+                   newLi.innerText=`My Awesome item`;
+                   newLi.classList.add('item');
+
+                // append item to parent;
+                    itemList.appendChild(newLi)
+                }
+            )
+        </script>
+</body>
+</html>
